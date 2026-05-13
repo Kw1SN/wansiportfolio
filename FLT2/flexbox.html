@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Finals Task</title>
+  <style>
+.container {
+  display: flex;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.blue { background-color: lightblue; }
+.pink { background-color: pink; }
+
+.ex-12a .i1 { width: 200px; }
+.ex-12a .i2 { width: 75px; }
+
+.ex-12b .i1 { width: 50px; }
+.ex-12b .i2 { flex-grow: 1; } 
+.ex-12b .i3 { width: 75px; }
+
+.ex-12c {
+  justify-content: space-between;
+}
+.ex-12c .item { width: 60px; }
+
+.ex-12d{
+background-color:white ;
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:50px;
+border:2px solid gray;
+margin:20px;
+padding:0 10px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.beige-section {
+  background-color: #f5f5dc; 
+  padding: 20px;
+  height: 100px;
+}
+
+.green-section {
+  background-color: #5cb85c; 
+  border: 5px solid #adff2f; 
+  padding: 10px;
+  min-height: 200px;
+}
+
+.main-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #adff2f; 
+}
+
+@media (min-width: 800px) {
+  .main-container {
+    flex-direction: row;
+  }
+  
+  .left-nav {
+    flex: 1; 
+  }
+  
+  .right-nav {
+    flex: 2; 
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .left-nav, .right-nav {
+    width: auto; 
+  }
+}
+  </style>
+</head>
+<body>
+
+ <p style="color: white; background: black; margin: 0; padding: 10px;">12a. Flexbox with 2 items</p>
+<div class="container ex-12a">
+  <div class="item blue i1">200px</div>
+  <div class="item pink i2">75px</div>
+</div>
+
+<p style="color: white; background: black; margin: 0; padding: 10px;">12b. Flexbox with 3 items</p>
+<div class="container ex-12b">
+  <div class="item blue i1">item1</div>
+  <div class="item pink i2">item2</div>
+  <div class="item blue i3">item3</div>
+</div>
+
+<p style="color: white; background: black; margin: 0; padding: 10px;">12c. Flexbox with 4 items, spread evenly accros the page</p>
+<div class="container ex-12c">
+  <div class="item pink">item1</div>
+  <div class="item pink">item2</div>
+  <div class="item pink">item3</div>
+  <div class="item pink">item4</div>
+</div>
+
+<p style="color: white; background: black; margin: 0; padding: 20px;">12d. Flexbox below with height</p>
+<div class="container ex-12d">
+  <div class="item pink">item1</div>
+  <div class="item pink">item2</div>
+</div>
+
+<header class="beige-section">This is a Header</header>
+
+<div class="main-container">
+  <section class="green-section left-nav">Section left-nav</section>
+  <section class="green-section right-nav">Section right-nav</section>
+</div>
+
+<footer class="beige-section">This is a footer</footer>
+
+</body>
+</html>
